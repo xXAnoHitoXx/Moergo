@@ -132,6 +132,17 @@
                 ;
         };
 
+        underscore: underscore {
+            label = "underscore";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHIFT>
+                , <&macro_tap &kp MINUS>
+                , <&macro_release &kp LSHIFT>
+                ;
+        };
+
         bt_0: bt_0 {
             label = "BT_0";
             compatible = "zmk,behavior-macro";
