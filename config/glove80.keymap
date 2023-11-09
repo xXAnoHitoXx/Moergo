@@ -77,7 +77,7 @@
                 ;
         };
 
-        del_word : del_word {
+        del_word: del_word {
             label = "del_word";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -88,7 +88,7 @@
                 ;
         };
 
-        copy : copy {
+        copy: copy {
             label = "copy";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -99,7 +99,7 @@
                 ;
         };
 
-        paste : paste {
+        paste: paste {
             label = "paste";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -110,7 +110,7 @@
                 ;
         };
 
-        save : save {
+        save: save {
             label = "save";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -121,7 +121,7 @@
                 ;
         };
 
-        vsc_cmd : vsc_cmd {
+        vsc_cmd: vsc_cmd {
             label = "vsc_cmd";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -317,17 +317,6 @@
        &none            &none            &none            &none            &none                    &none   &none   &none   &none   &none   &none           &none     &none      &none       &none           &none
             >;
        };
-       
-       layer_Temp {
-            bindings = <
-       &none            &none            &none            &none            &none                                                                            &none   &none   &none   &none           &none
-       &none            &none            &none            &none            &none            &none                                                   &none   &none   &none   &none   &none           &none
-       &none            &none            &none            &none            &none            &none                                                   &none   &none   &none   &none   &none           &none
-       &none            &none            &none            &none            &none            &none                                                   &none   &none   &none   &none   &none           &none
-       &none            &none            &none            &none            &none            &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none           &none
-       &none            &none            &none            &none            &none                    &none   &none   &none   &none   &none   &none           &none   &none   &none   &none           &none
-            >;
-       };
-    
+
     };
 };
