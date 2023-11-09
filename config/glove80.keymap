@@ -77,6 +77,61 @@
                 ;
         };
 
+        del_word : del_word {
+            label = "del_word";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp BSPC>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        copy : copy {
+            label = "copy";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        paste : paste {
+            label = "paste";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp V>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        save : save {
+            label = "save";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp S>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        vsc_cmd : vsc_cmd {
+            label = "vsc_cmd";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LSHIFT>
+                , <&macro_tap &kp P>
+                , <&macro_release &kp LCTRL &kp LSHIFT>
+                ;
+        };
+
         bt_0: bt_0 {
             label = "BT_0";
             compatible = "zmk,behavior-macro";
@@ -226,7 +281,7 @@
               &kp TAB   &kp Q     &kp W     &kp F      &kp P      &kp B                                                                      &kp J   &kp L     &kp U     &kp Y  &kp SEMI   &kp BSLH
               &kp ESC   &kp A     &kp R     &kp S      &kp T      &kp G                                                                      &kp M   &kp N     &kp E     &kp I     &kp O    &kp SQT
             &kp GRAVE   &kp Z     &kp X     &kp C      &kp D      &kp V  &kp DEL    &kp LCTRL  &kp LALT   &kp LGUI   &kp RALT   &kp RCTRL    &kp K   &kp H     &kp COMMA   &kp DOT  &kp FSLH  &kp PG_UP
- &magic LAYER_Magic 0   &kp HOME  &kp END   &left_win  &right_win        &kp SPACE  &kp LSHFT  &lower     &kp RET    &kp RSHFT  &kp BSPC     &kp UP  &kp DOWN  &kp LBKT  &kp RBKT  &kp PG_DN
+ &magic LAYER_Magic 0   &kp HOME  &kp END   &left_win  &right_win        &kp SPACE  &kp LSHFT  &mo 1      &kp RET    &kp RSHFT  &kp BSPC     &kp UP  &kp DOWN  &kp LBKT  &kp RBKT  &kp PG_DN
             >;
         };
 
@@ -234,10 +289,10 @@
             bindings = <
          &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_NEXT     &kp C_PP                                                                                   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP            &none  &kp PAUSE_BREAK
                &trans         &none       &none       &none        &none  &kp HOME                                                   &kp LEFT_PARENTHESIS  &kp KP_NUM  &kp KP_EQUAL  &kp KP_SLASH  &kp KP_MULTIPLY  &kp PRINTSCREEN
-               &trans      &kp FSLH    &kp STAR   &kp MINUS  &kp KP_PLUS   &kp END                                                  &kp RIGHT_PARENTHESIS   &kp KP_N7     &kp KP_N8     &kp KP_N9     &kp KP_MINUS   &kp SCROLLLOCK
+               &kp UNDERSCORE &kp FSLH    &kp STAR   &kp MINUS  &kp KP_PLUS   &kp END                                                  &kp RIGHT_PARENTHESIS   &kp KP_N7     &kp KP_N8     &kp KP_N9      &kp KP_MINUS   &kp SCROLLLOCK
                &trans         &none    &kp LEFT    &kp LBKT     &kp LBRC  &kp LPAR                                                            &kp PERCENT   &kp KP_N4     &kp KP_N5     &kp KP_N6      &kp KP_PLUS            &none
-               &trans     &kp K_APP       &none    &kp RBKT     &kp RBRC  &kp RPAR  &trans  &trans  &trans  &trans  &trans  &trans              &kp COMMA   &kp KP_N1     &kp KP_N2     &kp KP_N3     &kp KP_ENTER           &trans
- &magic LAYER_Magic 0      &kp CAPS     &kp INS     &kp F11      &kp F12            &trans  &trans  &to 0   &trans  &trans  &trans                         &kp KP_NUM     &kp KP_N0    &kp KP_DOT     &kp KP_ENTER           &trans
+               &trans     &kp K_APP       &none    &kp RBKT     &kp RBRC  &kp RPAR  &trans  &trans  &trans  &trans   &trans  &trans              &kp COMMA   &kp KP_N1     &kp KP_N2     &kp KP_N3      &kp KP_ENTER           &trans
+ &magic LAYER_Magic 0      &kp CAPS     &kp INS     &kp F11      &kp F12            &trans  &trans  &none   &kp DEL  &mo 3   &del_word                       &kp COMMA     &kp KP_N0     &kp KP_DOT     &kp KP_ENTER           &trans
             >;
         };
 
@@ -252,5 +307,27 @@
             >;
         };
 
+	layer_Auxilary {
+            bindings = <
+       &none            &none            &none            &none            &none                                                                            &none     &none      &none       &none           &none
+       &none            &none            &none            &none            &none            &none                                                   &none   &none     &none      &none       &none           &none
+       &none            &none            &none            &none            &none            &none                                                   &none   &none     &kp UP     &none       &none           &none
+       &none            &none            &none            &save            &vsc_cmd         &none                                                   &none   &kp LEFT  &kp DOWN   &kp RIGHT   &none           &none
+       &none            &none            &none            &copy            &paste           &none   &none   &none   &none   &none   &none   &none   &none   &none     &none      &none       &none           &none
+       &none            &none            &none            &none            &none                    &none   &none   &none   &none   &none   &none           &none     &none      &none       &none           &none
+            >;
+       };
+       
+       layer_Temp {
+            bindings = <
+       &none            &none            &none            &none            &none                                                                            &none   &none   &none   &none           &none
+       &none            &none            &none            &none            &none            &none                                                   &none   &none   &none   &none   &none           &none
+       &none            &none            &none            &none            &none            &none                                                   &none   &none   &none   &none   &none           &none
+       &none            &none            &none            &none            &none            &none                                                   &none   &none   &none   &none   &none           &none
+       &none            &none            &none            &none            &none            &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none           &none
+       &none            &none            &none            &none            &none                    &none   &none   &none   &none   &none   &none           &none   &none   &none   &none           &none
+            >;
+       };
+    
     };
 };
