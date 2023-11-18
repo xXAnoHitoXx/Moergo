@@ -249,7 +249,7 @@
             &kp GRAVE   &kp Q     &kp W     &kp F      &kp P      &kp B                                                                             &kp J   &kp L     &kp U     &kp Y    &kp SEMI  &none
               &kp ESC   &kp A     &kp R     &kp S      &kp T      &kp G                                                                             &kp M   &kp N     &kp E     &kp I    &kp O     &kp TAB
                 &none   &kp Z     &kp X     &kp C      &kp D      &kp V  &none      &none         &none     &none          &none        &none       &kp K   &kp H     &kp COMMA &kp DOT  &kp FSLH  &none
- &magic LAYER_Magic 0   &kp HOME  &kp END   &left_win  &right_win        &kp LSHFT  &lt 1 SPACE   &kp DEL   &hm RALT RET   &kp BSPC   &kp RCTRL           &kp UP    &kp DOWN  &kp LBKT &kp RBKT  &none
+ &magic LAYER_Magic 0   &kp HOME  &kp END   &left_win  &right_win        &kp LSHFT  &lt 1 SPACE   &kp DEL   &hm RALT RET   &lt 3 BSPC   &kp RCTRL           &kp UP    &kp DOWN  &kp LBKT &kp RBKT  &none
             >;
         };
 
