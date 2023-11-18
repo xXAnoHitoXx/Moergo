@@ -42,6 +42,26 @@
             tapping-term-ms = <200>;
             bindings = <&mo LAYER_Lower>, <&to LAYER_Lower>;
         };
+
+        hl : homerow_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_LAYER";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&mo>;
+        };
+
+        hm : homerow_mod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MOD";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
     };
 };
 
@@ -232,23 +252,23 @@
 
         layer_Base {
             bindings = <
-                &none   &none     &none     &none      &none                                                                                         &none     &none     &none   &none      &none
-               &kp F1   &kp F2    &kp F3    &kp F4     &kp F5     &kp F6                                                                     &kp F7  &kp F8    &kp F9    &kp F10  &kp F11   &kp F12
-            &kp GRAVE   &kp Q     &kp W     &kp F      &kp P      &kp B                                                                      &kp J   &kp L     &kp U     &kp Y    &kp SEMI  &none
-              &kp ESC   &kp A     &kp R     &kp S      &kp T      &kp G                                                                      &kp M   &kp N     &kp E     &kp I    &kp O     &kp RET
-              &kp TAB   &kp Z     &kp X     &kp C      &kp D      &kp V  &kp DEL    &kp LCTRL   &kp LALT   &kp LGUI   &kp RALT   &kp RSHFT   &kp K   &kp H     &kp COMMA &kp DOT  &kp FSLH  &kp TAB
- &magic LAYER_Magic 0   &kp HOME  &kp END   &left_win  &right_win        &kp LSHFT  &kp SPACE   &mo 1      &mo 3      &kp BSPC   &kp RCTRL           &kp UP    &kp DOWN  &kp LBKT &kp RBKT  &none
+                &none   &none     &none     &none      &none                                                                                                &none     &none     &none    &none     &none
+               &kp F1   &kp F2    &kp F3    &kp F4     &kp F5     &kp F6                                                                            &kp F7  &kp F8    &kp F9    &kp F10  &kp F11   &kp F12
+            &kp GRAVE   &kp Q     &kp W     &kp F      &kp P      &kp B                                                                             &kp J   &kp L     &kp U     &kp Y    &kp SEMI  &none
+              &kp ESC   &kp A     &kp R     &kp S      &kp T      &kp G                                                                             &kp M   &kp N     &kp E     &kp I    &kp O     &kp TAB
+                &none   &kp Z     &kp X     &kp C      &kp D      &kp V  &none      &none         &none     &none          &none        &none       &kp K   &kp H     &kp COMMA &kp DOT  &kp FSLH  &none
+ &magic LAYER_Magic 0   &kp HOME  &kp END   &left_win  &right_win        &kp LSHFT  &hl SPACE 1   &kp DEL   &hm RET RALT   &hl BSPC 3   &kp RCTRL           &kp UP    &kp DOWN  &kp LBKT &kp RBKT  &none
             >;
         };
 
         layer_Lower { 
             bindings = <
-       &none   &none      &none      &none      &none                                                                                    &none       &none       &none        &none          &none
-       &none   &none      &none      &none      &none       &none                                                             &none      &none       &none       &none        &none          &none
-       &none   &none      &none      &kp UP     &none       &none                                                             &none      &kp KP_N7   &kp KP_N8   &kp KP_N9    &none          &none
-       &none   &none      &kp LEFT   &kp DOWN   &kp RIGHT   &kp LPAR                                                          &kp LPAR   &kp KP_N4   &kp KP_N5   &kp KP_N6    &kp KP_ENTER   &none
-       &none   &kp FSLH   &kp STAR   &kp MINUS  &kp PLUS    &kp RPAR   &none   &none   &none   &none   &none      &none       &kp RPAR   &kp KP_N1   &kp KP_N2   &kp KP_N3    &kp KP_ENTER   &none
-       &none   &none      &none      &none      &none                  &none   &none   &none   &none   &kp BSPC   &kp SPACE              &kp COMMA   &kp KP_N0   &kp KP_DOT   &kp KP_ENTER   &none
+       &none   &none      &none      &none      &none                                                                                       &none       &none       &none        &none          &none
+       &none   &none      &none      &none      &none       &none                                                                &none      &none       &none       &none        &none          &none
+       &none   &none      &none      &kp UP     &none       &none                                                                &none      &kp KP_N7   &kp KP_N8   &kp KP_N9    &none          &none
+       &none   &none      &kp LEFT   &kp DOWN   &kp RIGHT   &kp LPAR                                                             &kp LPAR   &kp KP_N4   &kp KP_N5   &kp KP_N6    &kp KP_ENTER   &none
+       &none   &kp FSLH   &kp STAR   &kp MINUS  &kp PLUS    &kp RPAR   &none   &none   &none   &none      &none      &none       &kp RPAR   &kp KP_N1   &kp KP_N2   &kp KP_N3    &kp KP_ENTER   &none
+       &none   &none      &none      &none      &none                  &none   &none   &none   &kp LGUI   &kp BSPC   &kp SPACE              &kp COMMA   &kp KP_N0   &kp KP_DOT   &kp KP_ENTER   &none
             >;
         };
 
@@ -270,7 +290,7 @@
        &none   &none    &kp STAR   &kp MINUS  &kp PLUS   &none                                                             &none       &kp AMPS    &kp PIPE    &kp EXCL   &none         &none
        &none   &us      &kp LEFT   &kp LBKT   &kp LBRC   &kp LPAR                                                          &kp PRCNT   &kp EQUAL   &kp CARET   &kp DLLR   &kp HASH      &none
        &none   &kp AT   &kp RIGHT  &kp RBKT   &kp RBRC   &kp RPAR   &none     &none      &none     &none   &none   &none   &kp SQT     &kp COLON   &kp LT      &kp GT     &kp BSLH      &none
-       &none   &none    &none      &none      &none                 &kp DQT   &kp RET    &kp SEMI  &none   &none   &none               &none       &none       &none      &none         &none
+       &none   &none    &none      &none      &none                 &kp SQT   &kp DQT    &kp SEMI  &none   &none   &none               &none       &none       &none      &none         &none
        
             >;
         };
