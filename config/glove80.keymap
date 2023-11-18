@@ -237,7 +237,7 @@
             &kp GRAVE   &kp Q     &kp W     &kp F      &kp P      &kp B                                                                      &kp J   &kp L     &kp U     &kp Y    &kp SEMI  &none
               &kp ESC   &kp A     &kp R     &kp S      &kp T      &kp G                                                                      &kp M   &kp N     &kp E     &kp I    &kp O     &kp TAB
                 &none   &kp Z     &kp X     &kp C      &kp D      &kp V  &kp DEL    &kp LCTRL   &kp LALT   &kp LGUI   &kp RALT   &kp RSHFT   &kp K   &kp H     &kp COMMA &kp DOT  &kp FSLH  &none
- &magic LAYER_Magic 0   &kp HOME  &kp END   &left_win  &right_win        &kp LSHFT  &kp SPACE   &mo 1      &kp RET    &mo 3      &kp RCTRL           &kp UP    &kp DOWN  &kp LBKT &kp RBKT  &none
+ &magic LAYER_Magic 0   &kp HOME  &kp END   &left_win  &right_win        &kp LSHFT  &kp SPACE   &mo 1      &mo 3      &kp BSPC   &kp RCTRL           &kp UP    &kp DOWN  &kp LBKT &kp RBKT  &none
             >;
         };
 
@@ -270,7 +270,7 @@
        &none   &none    &kp STAR   &kp MINUS  &kp PLUS   &none                                                             &none       &kp AMPS    &kp PIPE    &kp EXCL   &none         &none
        &none   &us      &kp LEFT   &kp LBKT   &kp LBRC   &kp LPAR                                                          &kp PRCNT   &kp EQUAL   &kp CARET   &kp DLLR   &kp HASH      &none
        &none   &kp AT   &kp RIGHT  &kp RBKT   &kp RBRC   &kp RPAR   &none     &none      &none     &none   &none   &none   &kp SQT     &kp COLON   &kp GT      &kp LT     &kp BSLH      &none
-       &none   &none    &none      &none      &none                 &kp DQT   &kp BSPC   &kp SEMI  &none   &none   &none               &none       &none       &none      &none         &none
+       &none   &none    &none      &none      &none                 &kp DQT   &kp RET    &kp SEMI  &none   &none   &none               &none       &none       &none      &none         &none
        
             >;
         };
