@@ -30,12 +30,14 @@
 #define LAYER_Lower 0
 #endif
 
+
+&lt {
+    tapping-term-ms = <100>;
+};
+
 / {
     /* Glove80 system behavior & macros */
     behaviors {
-        &lt {
-            tapping-term-ms = <100>;
-        };
 
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
         // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
