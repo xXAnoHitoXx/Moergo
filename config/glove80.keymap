@@ -24,6 +24,8 @@
 #define LAYER_Base 0
 #define LAYER_Lower 1
 #define LAYER_Magic 2
+#define LAYER_Auxilary 3
+#define LAYER_Onehand 4
 
 /* To deal with the situation where there is no Lower layer, to keep &lower happy */
 #ifndef LAYER_Lower
@@ -256,16 +258,14 @@
 / {
     keymap {
         compatible = "zmk,keymap";
-
-
         layer_Base {
             bindings = <
-                &none   &none     &none     &none      &none                                                                                                &none     &none     &none    &none     &none
-               &kp F1   &kp F2    &kp F3    &kp F4     &kp F5     &kp F6                                                                            &kp F7  &kp F8    &kp F9    &kp F10  &kp F11   &kp F12
-            &kp GRAVE   &none     &kp W     &kp F      &kp P      &none                                                                             &none   &kp L     &kp U     &kp Y    &kp SEMI  &none
-              &kp ESC   &kp A     &kp R     &kp S      &kp T      &kp G                                                                             &kp M   &kp N     &kp E     &kp I    &kp O     &kp TAB
-                &none   &kp Z     &kp X     &kp C      &kp D      &kp V  &none      &none         &none     &none          &none        &kp RALT    &kp K   &kp H     &kp COMMA &kp DOT  &kp FSLH  &none
- &magic LAYER_Magic 0   &kp HOME  &kp END   &left_win  &right_win        &kp LSHFT  &lt 1 SPACE   &kp DEL   &hm RALT RET   &lt 3 BSPC   &kp RCTRL           &kp UP    &kp DOWN  &kp LBKT &kp RBKT  &none
+             &none       &none     &none     &none      &none                                                                                                &none     &none     &none    &none     &tog 4
+             &kp F1      &kp F2    &kp F3    &kp F4     &kp F5     &kp F6                                                                            &kp F7  &kp F8    &kp F9    &kp F10  &kp F11   &kp F12
+             &kp GRAVE   &none     &kp W     &kp F      &kp P      &none                                                                             &none   &kp L     &kp U     &kp Y    &kp SEMI  &none
+             &kp ESC     &kp A     &kp R     &kp S      &kp T      &kp G                                                                             &kp M   &kp N     &kp E     &kp I    &kp O     &kp TAB
+             &none       &kp Z     &kp X     &kp C      &kp D      &kp V  &none      &none         &none     &none          &none        &none       &kp K   &kp H     &kp COMMA &kp DOT  &kp FSLH  &none
+ &magic LAYER_Magic 0    &kp HOME  &kp END   &left_win  &right_win        &kp LSHFT  &lt 1 SPACE   &kp DEL   &hm RALT RET   &lt 3 BSPC   &kp RCTRL           &kp UP    &kp DOWN  &kp LBKT &kp RBKT  &none
             >;
         };
 
@@ -299,6 +299,18 @@
        &none   &us      &kp LEFT   &kp LBKT   &kp LBRC   &kp LPAR                                                          &kp PRCNT   &kp EQUAL   &kp CARET   &kp DLLR   &kp HASH      &none
        &none   &kp AT   &kp RIGHT  &kp RBKT   &kp RBRC   &kp RPAR   &none     &none      &none     &none   &none   &none   &kp SQT     &kp COLON   &kp LT      &kp GT     &kp BSLH      &none
        &none   &none    &none      &none      &none                 &kp SQT   &kp DQT    &kp SEMI  &none   &none   &none               &none       &none       &none      &none         &none
+       
+            >;
+        };
+
+	    layer_Buxilary {
+            bindings = <
+       &trans   &trans   &trans   &trans   &trans                                                                              &trans   &trans   &trans   &trans   &trans   
+       &trans   &trans   &trans   &trans   &trans   &trans                                                            &trans   &trans   &trans   &trans   &trans   &trans   
+       &trans   &trans   &trans   &trans   &trans   &trans                                                            &trans   &trans   &trans   &trans   &trans   &trans   
+       &trans   &trans   &trans   &trans   &trans   &trans                                                            &trans   &trans   &trans   &trans   &trans   &trans   
+       &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans      &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   
+       &trans   &trans   &trans   &trans   &trans            &trans   &kp LCTRL   &trans   &trans   &trans   &trans            &trans   &trans   &trans   &trans   &trans   
        
             >;
         };
