@@ -97,16 +97,6 @@
                 ;
         };
 
-        delw: delw {
-            label = "delw";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp BSPC>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
         us: us {
             label = "us";
             compatible = "zmk,behavior-macro";
@@ -271,12 +261,12 @@
 
         layer_Lower { 
             bindings = <
-       &none   &none      &none      &none      &none                                                                                    &none       &none       &none        &none          &none
-       &none   &none      &none      &none      &none       &none                                                             &none      &none       &none       &none        &none          &none
-       &none   &none      &none      &kp UP     &kp Q       &none                                                             &none      &kp KP_N7   &kp KP_N8   &kp KP_N9    &none          &none
-       &none   &none      &kp LEFT   &kp DOWN   &kp RIGHT   &kp LPAR                                                          &kp LPAR   &kp KP_N4   &kp KP_N5   &kp KP_N6    &kp KP_ENTER   &none
-       &none   &kp FSLH   &kp STAR   &kp J      &kp B       &kp RPAR   &none   &none   &none   &none      &none   &none       &kp RPAR   &kp KP_N1   &kp KP_N2   &kp KP_N3    &kp KP_ENTER   &none
-       &none   &none      &none      &none      &none                  &none   &none   &none   &kp LGUI   &delw   &kp LSHFT              &kp COMMA   &kp KP_N0   &kp KP_DOT   &kp KP_ENTER   &none
+       &none   &none      &none      &none      &none                                                                                      &none       &none       &none        &none          &none
+       &none   &none      &none      &none      &none       &none                                                               &none      &none       &none       &none        &none          &none
+       &none   &none      &none      &kp UP     &kp Q       &none                                                               &none      &kp KP_N7   &kp KP_N8   &kp KP_N9    &none          &none
+       &none   &none      &kp LEFT   &kp DOWN   &kp RIGHT   &kp LPAR                                                            &kp LPAR   &kp KP_N4   &kp KP_N5   &kp KP_N6    &kp KP_ENTER   &none
+       &none   &kp FSLH   &kp STAR   &kp J      &kp B       &kp RPAR   &none   &none   &none   &none      &none     &none       &kp RPAR   &kp KP_N1   &kp KP_N2   &kp KP_N3    &kp KP_ENTER   &none
+       &none   &none      &none      &none      &none                  &none   &none   &none   &kp LGUI   &kp DEL   &kp LSHFT              &kp COMMA   &kp KP_N0   &kp KP_DOT   &kp KP_ENTER   &none
             >;
         };
 
